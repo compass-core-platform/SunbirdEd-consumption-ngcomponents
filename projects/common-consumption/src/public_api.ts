@@ -40,6 +40,7 @@ export * from './lib/card/member-card/member-card.component';
 export * from './lib/card/notification-card/notification-card.component';
 export * from './lib/card/toc-card/toc-card.component';
 export * from './lib/card/my-course-card/my-course-card.component';
+export * from './lib/card/compass-course-card/compass-course-card.component';
 export * from './lib/card/group-card/group-card.component';
 export * from './lib/list-view/list-view.module';
 export * from './lib/modal/modal.module';
