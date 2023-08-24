@@ -1,11 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-interface cardInfo {
-  title?: string,
-  type?: string,
-  icon?: any,
-  noOfCourses?: number,
-  name?: string
-}
+import { cardInfo } from '../models';
 @Component({
   selector: 'sb-popular-card',
   templateUrl: './popular-card.component.html',

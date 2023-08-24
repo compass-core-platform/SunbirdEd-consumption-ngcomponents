@@ -18,10 +18,9 @@ export class LernLandingPageComponent implements OnInit {
   topicsDataSource = TOPICS_DATA;
 
   competencyData = {
-    title: "Communication",
+    name: "Communication",
     type: "Behavioural",
-    icon: "assets/common-consumption/images/course.svg",
-    noOfCourses: 4
+    count: 4
   }
 
   topicsData = {

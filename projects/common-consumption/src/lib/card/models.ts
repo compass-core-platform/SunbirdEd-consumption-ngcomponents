@@ -239,3 +239,9 @@ export enum ButtonPosition {
     RIGHT = "right",
     BOTTOM = "bottom"
 }
+
+export interface cardInfo {
+    type?: string,
+    count?: number,
+    name: string
+}
