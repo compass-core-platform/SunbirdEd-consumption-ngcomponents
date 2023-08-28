@@ -5,7 +5,8 @@
             <p>{{config['description']}} </p>
             <div *ngIf="config['showButtons']" class="buttons-section">
                 <button (click)="loginCallback($event)" class="sb-btn sb-btn-normal sb-btn-default mr-4">Login</button>
-                <button (click)="registerCallback($event)" class="sb-btn sb-btn-normal sb-btn-primary ml-4">Register</button>
+                <button (click)="registerCallback($event)"
+                    class="sb-btn sb-btn-normal sb-btn-primary ml-4">Register</button>
             </div>
         </div>
         <div class="five wide column img-container">
