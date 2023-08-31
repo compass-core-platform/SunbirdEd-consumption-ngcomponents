@@ -8,7 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CompassBannerCardComponent implements OnInit {
 
-  @Input() config: object; 
+  @Input() config: object;
+  @Input() loginCallback: (args: any) => void;
+  @Input() registerCallback: (args: any) => void;
 
   constructor() { }
 

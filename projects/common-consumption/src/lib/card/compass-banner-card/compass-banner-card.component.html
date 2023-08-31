@@ -1,17 +1,16 @@
 <div class="banner">
-    <div class="container ui">
-        <div class="ui grid middle aligned stackable mt-5">
-            <div class="seven wide column very padded text left-side">
-                <h1>{{config['title']}}</h1>
-                <p>{{config['description']}} </p>
-                <div *ngIf="config['showButtons']" class="buttons-section">
-                    <button class="com-secondary-btn mr-4">Login</button>
-                    <button class="com-primary-btn ml-4">Register</button>
-                </div>
+    <div class="container ui grid middle aligned stackable mt-5">
+        <div class="seven wide column very padded text left-side">
+            <h1>{{config['title']}}</h1>
+            <p>{{config['description']}} </p>
+            <div *ngIf="config['showButtons']" class="buttons-section">
+                <button (click)="loginCallback($event)" class="com-secondary-btn mr-4">Login</button>
+                <button (click)="registerCallback($event)"
+                    class="com-primary-btn ml-4">Register</button>
             </div>
-            <div class="five wide column img-container">
-                <img class="ui image center aligned" src="{{config['image']}}" alt="banner" />
-            </div>
+        </div>
+        <div class="five wide column img-container">
+            <img class="ui image center aligned" src="{{config['image']}}" alt="banner" />
         </div>
     </div>
 </div>
