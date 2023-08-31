@@ -5,7 +5,10 @@ interface cardInfo {
   icon?: any,
   description?: string,
   noOfCourses?: number,
-  name?: string
+  name?: string,
+  btnText? : string,
+  expand? : boolean,
+  expandData? : any
 }
 @Component({
   selector: 'sb-popular-card',
@@ -15,7 +18,12 @@ interface cardInfo {
 export class PopularCardComponent implements OnInit {
   @Input() data: cardInfo;
   @Input() pillName: string;
+  display: boolean = false;
   constructor() { }
+
+  public setDisplay(){
+    this.display = !this.display;
+  }
 
   ngOnInit(): void {
   }

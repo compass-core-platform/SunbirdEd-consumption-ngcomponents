@@ -22,7 +22,11 @@ export class LernLandingPageComponent implements OnInit {
     type: "Behavioural",
     icon: "assets/common-consumption/images/course.svg",
     description: "Planning vigilance activities in accordance with procedures that balance the needs of maintaining a fraud free environment and business objectives",
-    noOfCourses: 4
+    noOfCourses: 4,
+    btnText : "View courses",
+    expand : true,
+    expandData: [{"trackable":{"enabled":"No","autoBatch":"No"},"identifier":"do_113862347491254272135","primaryCategory":"Course Unit","channel":"0138325860604395527","name":"social science","mimeType":"application/vnd.ekstep.content-collection","contentType":"CourseUnit","pkgVersion":1,"objectType":"Content","orgDetails":{"orgName":"compass"}},
+    {"trackable":{"enabled":"No","autoBatch":"No"},"identifier":"do_113855796417691648150","primaryCategory":"Course Unit","channel":"0138325860604395527","name":"Math Unit","mimeType":"application/vnd.ekstep.content-collection","contentType":"CourseUnit","pkgVersion":1,"objectType":"Content","orgDetails":{"orgName":"compass"}}]
   }
 
   topicsData = {
