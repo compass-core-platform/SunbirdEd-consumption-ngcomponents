@@ -1,4 +1,4 @@
-@use "@project-sunbird/sb-styles/assets/mixins/mixins"as *;
+@use "compass-sb-styles/assets/mixins/mixins"as *;
 
 .popular-card {
     @include border(border,1px,var(--com-grey-border) !important);
