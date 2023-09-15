@@ -31,6 +31,7 @@ import { CompassBannerCardComponent } from './compass-banner-card/compass-banner
 import { CompassCourseCardComponent } from './compass-course-card/compass-course-card.component';
 import { GoalOrientedHrCardComponent } from './goal-oriented-hr-card/goal-oriented-hr-card.component';
 import { BrowseByCardComponent } from './browse-by-card/browse-by-card.component';
+import { LevelsComponent } from './levels/levels.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { BrowseByCardComponent } from './browse-by-card/browse-by-card.component
     CompassBannerCardComponent,
     CompassCourseCardComponent,
     GoalOrientedHrCardComponent,
-    BrowseByCardComponent
+    BrowseByCardComponent,
+    LevelsComponent
   ],
   imports: [
     CommonModule,
@@ -92,7 +94,8 @@ import { BrowseByCardComponent } from './browse-by-card/browse-by-card.component
     CompassBannerCardComponent,
     CompassCourseCardComponent,
     GoalOrientedHrCardComponent,
-    BrowseByCardComponent
+    BrowseByCardComponent,
+    LevelsComponent
   ]
 })
 export class CardModule { }
