@@ -4,9 +4,9 @@
             <h1>{{config['title']}}</h1>
             <p>{{config['description']}} </p>
             <div *ngIf="config['showButtons']" class="buttons-section">
-                <button (click)="loginCallback($event)" class="com-secondary-btn mr-4">Login</button>
+                <button (click)="loginCallback($event)" class="com-secondary-btn mr-4">{{config['loginTxt']}}</button>
                 <button (click)="registerCallback($event)"
-                    class="com-primary-btn ml-4">Register</button>
+                    class="com-primary-btn ml-4">{{config['registerTxt']}}</button>
             </div>
         </div>
         <div class="five wide column img-container">
