@@ -3,12 +3,12 @@
     <div class="text-section">
         <img class="course-icon" src="/assets/images/course-icon.png" alt="course-icon" /> <span
             class="item-name">COURSE</span>
-        <p class="course-title">{{data["name"]}}</p>
-        <p class="category">{{data["primaryCategory"]}}</p>
+        <p class="course-title">{{name}}</p>
+        <p class="category">{{category}}</p>
         <span *ngIf='data["rating"]' class="rating">{{data["rating"]}}</span> <i *ngIf='data["rating"]'
             class="star icon"></i> <span *ngIf='data["rating"]' class="dot">.</span>
-        <i *ngIf='data["duration"]' class="clock icon"></i> <span *ngIf='data["duration"]' class="duration">{{data["duration"]}}</span>
-        <img *ngIf="data['showDD']" class="ui image right floated course-dd" src="/assets/images/course-dd.png"
+        <i *ngIf='data["duration"]d' class="clock icon"></i> <span *ngIf='data["duration"]' class="duration">{{data["duration"]}}</span>
+        <img *ngIf='data["duration"]' class="ui image right floated course-dd" src="/assets/images/course-dd.png"
             alt="course-img" />
     </div>
     <!-- <div class="progress">
