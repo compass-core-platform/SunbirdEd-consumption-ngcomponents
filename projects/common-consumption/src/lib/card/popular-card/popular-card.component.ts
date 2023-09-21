@@ -4,6 +4,7 @@ interface cardInfo {
   type?: string,
   icon?: any,
   description?: string,
+  associatedCoursesTxt?: string,
   noOfCourses?: number,
   name?: string,
   btnText? : string,

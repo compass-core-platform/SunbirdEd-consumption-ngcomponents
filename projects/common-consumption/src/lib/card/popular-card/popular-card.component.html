@@ -6,7 +6,7 @@
         <div class="popular-card-competency-content">
             <div class="w-50">
                 <img class="icon" src="{{data.icon}}" />
-                <span>Associated courses: {{data.noOfCourses}}</span>
+                <span>{{data.associatedCoursesTxt}}: {{data.noOfCourses}}</span>
             </div>
             <span *ngIf="data.description" class="w-50 d-flex flex-jc-flex-end">
                 <button class="com-tertiary-btn" (click)="setDisplay()">{{data.btnText}}<mat-icon *ngIf="!display">keyboard_arrow_down</mat-icon>
