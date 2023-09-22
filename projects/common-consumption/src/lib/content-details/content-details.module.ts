@@ -9,13 +9,15 @@ import { PipesModule } from '../pipes-module/pipes-module.module';
 import { TocCurriculumComponent } from './toc-curriculum/toc-curriculum.component';
 import { FormsModule } from '@angular/forms';
 import { MaterialExampleModule } from './../material.module';
+import { TocContentComponent } from './toc-content/toc-content.component';
 
 @NgModule({
   declarations: [
     PlayerActionsComponent,
     TocItemComponent,
     TocChildItemComponent,
-    TocCurriculumComponent
+    TocCurriculumComponent,
+    TocContentComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { MaterialExampleModule } from './../material.module';
     PlayerActionsComponent,
     TocItemComponent,
     TocChildItemComponent,
-    TocCurriculumComponent
+    TocCurriculumComponent,
+    TocContentComponent
   ]
 })
 export class ContentDetailsModule { }

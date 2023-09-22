@@ -1,0 +1,35 @@
+<mat-accordion class="toc-content">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <div>
+                    Learning Objective
+                </div>
+                <div class="progress-parent">
+                    <ng-container *ngIf="progress === 100">
+                        <i class="icon-svg icon-svg--xs icon-tick mr-8" role="img" aria-label="tick-icon">
+                            <svg class="icon">
+                                <use xlink:href="assets/common-consumption/images/sprite.svg#circle-with-check-symbol"></use>
+                            </svg>
+                        </i>
+                    </ng-container>
+                    <ng-container *ngIf="progress !== 100">
+                        <div class="mr-8 progress-circle progress-circle--xs" data-percentage="100">
+                            <svg class="progress-circle__svg" viewport="0 0 2000 2000">
+                                <circle class="progress-circle__stroke" r="50%" cx="50%" cy="50%"></circle>
+                                <circle class="progress-circle__stroke" r="50%" cx="50%" cy="50%"></circle>
+                            </svg>
+                            <span></span>
+                        </div>
+                    </ng-container>
+                    <ng-container>
+                        <div class="total-duration">{{duration}}</div>
+                    </ng-container>
+                </div>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-card class="content-details">
+            <mat-checkbox class="example-margin" [color]="'primary'">Check me!</mat-checkbox>
+        </mat-card>
+    </mat-expansion-panel>
+</mat-accordion>
