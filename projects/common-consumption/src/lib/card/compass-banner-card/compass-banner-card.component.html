@@ -1,7 +1,7 @@
 <div class="banner" [ngClass]="config['className']?config['className']:''">
     <div class="container ui grid middle aligned stackable mt-5">
         <div class="seven wide column very padded text left-side">
-            <h4 ><img src="assets/common-consumption/images/i-course.svg" /> {{config['contentType']}}</h4>
+            <h4 *ngIf="config['className']" class="	sub-heading-two"><mat-icon>video_library</mat-icon> {{config['contentType']}}</h4>
             <h1>{{config['title']}}</h1>
             <p>{{config['description']}} </p>
             <div *ngIf="config['showButtons']" class="buttons-section">
