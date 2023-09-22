@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'compass-banner',
@@ -11,10 +11,15 @@ export class CompassBannerCardComponent implements OnInit {
   @Input() config: object;
   @Input() loginCallback: (args: any) => void;
   @Input() registerCallback: (args: any) => void;
+  @Output() wishList : EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  
+  addwhishList(){
+    this.wishList.emit('add')
   }
 
 }

@@ -1,0 +1,19 @@
+<table class="levelsTable" *ngIf="levelsInfo">
+    <tr>
+        <th>{{levelsInfo.header.content}}</th>
+        <th>{{levelsInfo.header.type}}</th>
+        <th>{{levelsInfo.header.level}}</th>
+    </tr>
+    <tr *ngFor="let data of levelsInfo.data">
+        <td>{{data.content}}</td>
+        <td>{{data.type}}</td>
+        <td class="levelRange">
+                <ng-container *ngFor="let i of [].constructor(data.level)">
+                    <mat-icon class="selected">lens</mat-icon>
+                </ng-container>
+                <ng-container *ngFor="let i of [].constructor(5-data.level)">
+                    <mat-icon class="not-selected">lens</mat-icon>
+                </ng-container>
+        </td>
+    </tr>
+</table>

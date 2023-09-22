@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   showSideBar=false;
+  config:any;
   constructor() { }
 
   ngOnInit(): void {
+    this.config = {
+      className:'dark-background',
+      contentType:'course',
+      title:'Compass shared component',
+      description:'Course overview page description',
+      image:'assets/common-consumption/images/info-card_1.jpg',
+      keywords:['tag1', 'tag2', 'tag3'],
+      rating:4.2,
+      numberOfRating:'123 ratings',
+      duration:'12h'
+    }
   }
-
 }
