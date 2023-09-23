@@ -48,18 +48,19 @@
             }
         }
         ::ng-deep .mat-expansion-panel-body {
-            padding: 0 0.5rem 0.5rem 0.5rem;
+            padding: 0 1.5rem 1.5rem 1.5rem;
             mat-card.content-details {
                 border-radius: 0px;
                 border: 1px solid rgba(0,0,0, 0.16);
                 opacity: 1;
                 box-shadow: none;
-                padding: 24px 12px 24px 12px;
-                margin-top: 0.5rem;
+                padding: 1.5rem 0.75rem 1.5rem 0.75rem;
+                margin-top: 1.5rem;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
+                background-color: #00000014;
                 .content-duration {
                     display: flex;
                     flex-direction: row;
@@ -93,6 +94,9 @@
             }
         }
     }
+}
+::ng-deep .custom-checkbox .mat-checkbox-checked.mat-primary .mat-checkbox-background {
+    background-color: var(--com-primary-color);
 }
 .icon-svg {
     position: relative;
