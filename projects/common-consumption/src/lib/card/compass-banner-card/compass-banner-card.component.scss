@@ -4,7 +4,6 @@
     padding-top: 20px;
     padding-bottom: 40px;
     background-color: #F5F5F5;
-
     @media only screen and (min-width: 481px) {
 
         .left-side h1,
@@ -81,6 +80,63 @@
 
         img {
             margin-right: unset !important;
+        }
+    }
+}
+.dark-background {
+    background-color: #1C1D1F;
+    h1,h4 {
+        color:var(--white);  
+    }
+    h4{
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        .mat-icon{
+            font-size: 1.2rem;
+            height: 1.2rem;
+            color: var(--com-primary-color);
+            margin-right: 5px;
+        }
+    }
+    p{
+        margin-top: 1rem;
+        color:rgba(255, 255, 255, 0.95);
+    }
+    .rating-keyworks {
+        padding-top:60px;
+        p{
+            margin-top: 0.6rem;
+
+            .mat-standard-chip {
+                min-height: 24px;
+                font-size: 12px;
+            }
+        }
+        &__title{
+            color:rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+        &__stars{
+            color:var(--com-pink);
+            display: inline-flex;
+            flex-direction: row;
+            align-items: flex-start;
+            .mat-icon{
+                font-size: 20px;
+            }
+        }
+        &__total{
+            color:var(--white);
+        }
+        &__wishList{
+            display: inline-flex;
+            justify-content: center;
+            flex-flow: row;
+            color:var(--white);
+            &:hover{
+                text-decoration: none;
+            }
         }
     }
 }

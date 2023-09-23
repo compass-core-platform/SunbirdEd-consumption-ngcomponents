@@ -80,3 +80,4 @@ export * from './lib/card/compass-course-card/compass-course-card.component';
 export * from './lib/card/goal-oriented-hr-card/goal-oriented-hr-card.component';
 export * from './lib/card/browse-by-card/browse-by-card.component';
 export * from './lib/content-details/toc-content/toc-content.component';
+export * from './lib/card/levels/levels.component';

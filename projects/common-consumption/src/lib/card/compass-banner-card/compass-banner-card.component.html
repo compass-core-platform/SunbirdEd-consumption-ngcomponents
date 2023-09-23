@@ -1,12 +1,34 @@
-<div class="banner">
+<div class="banner" [ngClass]="config['className']?config['className']:''">
     <div class="container ui grid middle aligned stackable mt-5">
         <div class="seven wide column very padded text left-side">
+            <h4 *ngIf="config['className']" class="	sub-heading-two"><mat-icon>video_library</mat-icon> {{config['contentType']}}</h4>
             <h1>{{config['title']}}</h1>
             <p>{{config['description']}} </p>
             <div *ngIf="config['showButtons']" class="buttons-section">
                 <button (click)="loginCallback($event)" class="com-secondary-btn mr-4">{{config['loginTxt']}}</button>
                 <button (click)="registerCallback($event)"
                     class="com-primary-btn ml-4">{{config['registerTxt']}}</button>
+            </div>
+            <div class="rating-keyworks" *ngIf="config['contentType']">
+                <h5 class="rating-keyworks__title">{{config['title']}}</h5>
+                <p>
+                    <span class="rating-keyworks__stars" *ngIf="config['rating']">
+                        {{config['rating']}} <mat-icon>star</mat-icon> 
+                        <span class="rating-keyworks__total" *ngIf="config['numberOfRating']">({{config['numberOfRating']}})</span>
+                    </span>  <span *ngIf="config['rating']">&nbsp; &#8226;  &nbsp;</span>
+                    <span class="rating-keyworks__durations" *ngIf="config['duration']">{{config['duration']}}</span> 
+                    <span *ngIf="config['duration']"> &nbsp; &#8226;  &nbsp; </span>
+                    <a class="rating-keyworks__wishList" href="javascript:void(0)" (click)="addwhishList()">
+                    Add to wishlist <mat-icon>playlist_add</mat-icon>
+                    </a>
+                </p>
+                <p *ngIf="config['keywords']"> 
+                    <mat-chip-list>
+                        <mat-chip class="list" *ngFor="let keyword of config['keywords']">
+                            {{keyword}}
+                        </mat-chip>
+                    </mat-chip-list>
+                </p>
             </div>
         </div>
         <div class="five wide column img-container">
