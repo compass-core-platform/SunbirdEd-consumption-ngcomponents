@@ -29,16 +29,18 @@
                 padding-left: 0.5rem;
                 mat-panel-title {
                     justify-content: space-between;
+                    margin-right: 0px;
                     .progress-parent {
                         display: flex;
                         flex-direction: row;
-                        // align-items: center;
+                        align-items: center;
                         justify-content: center;
+                        .icon-svg {
+                            top: 0;
+                        }
                         .total-duration {
-                            @include typography(var(--font-com-lato), 14px, 400, 0.25px, 20px);
                             opacity: 1;
                             color: rgba(0,0,0,0.6);
-                            // font-family: "Lato-Regular";
                             text-align: left;
                         }
                     }
@@ -46,15 +48,47 @@
             }
         }
         ::ng-deep .mat-expansion-panel-body {
-            padding: 0.5rem !important;
+            padding: 0 0.5rem 0.5rem 0.5rem;
             mat-card.content-details {
                 border-radius: 0px;
                 border: 1px solid rgba(0,0,0, 0.16);
                 opacity: 1;
                 box-shadow: none;
-                padding: 24px 12px 24px 27px;
+                padding: 24px 12px 24px 12px;
+                margin-top: 0.5rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                .content-duration {
+                    display: flex;
+                    flex-direction: row;
+                    text-wrap: nowrap;
+                    opacity: 1;
+                    color: #0009;  
+                    .duration {
+                        opacity: 1;
+                        color: #0009;       
+                    }
+                }
                 .mat-checkbox-layout {
                     margin-bottom: 0px;
+                    @include typography(var(--font-com-lato), 16px, 400, 0.25px, 24px);
+                    opacity: 1;
+                    color: rgba(0,0,0,0.87);
+                    text-align: left;
+                    white-space: inherit;
+                }
+                .content-icon {
+                    opacity: 1;
+                    color: #0009;
+                    text-align: left;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    .icon-svg {
+                        top: 0;
+                    }
                 }
             }
         }
@@ -62,7 +96,6 @@
 }
 .icon-svg {
     position: relative;
-    top: 0.0625rem;
     display: inline-block;
     font-style: normal;
     font-weight: 400;
@@ -71,8 +104,8 @@
     opacity: 1;
 }
 .progress-circle {
-    height: calculateRem(32px);
-    width: calculateRem(32px);
+    height: calculateRem(24px);
+    width: calculateRem(24px);
     position: relative;
     span {
       position: absolute;
@@ -93,10 +126,10 @@
       fill: none;
       stroke-width: calculateRem(8px);
       &:nth-child(1) {
-        stroke: black;
+        stroke: rgba(0,0,0, 0.16);
       }
       &:nth-child(2) {
-        stroke: red;
+        stroke:  #1D8923;
         stroke-dasharray: 314.1592%;
       }
     }
@@ -109,7 +142,7 @@
       height: calculateRem(24px);
       width: calculateRem(24px);
       .progress-circle__stroke {
-        stroke-width: calculateRem(4px);
+        stroke-width: calculateRem(8px);
       }
     }
     &--sm {

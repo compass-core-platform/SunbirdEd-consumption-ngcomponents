@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'toc-content',
@@ -6,16 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toc-content.component.scss']
 })
 export class TocContentComponent implements OnInit {
-  progress = 100;
-  duration = '24m';
-  
+  @Input() courseModules: any = {};
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  courseModules = {
-    
-  }
+  // [mimeTypesData.COLLECTION, 'assets/common-consumption/images/sprite.svg#doc'],
+  // [mimeTypesData.VIDEO, 'assets/common-consumption/images/sprite.svg#play'],
+  // [mimeTypesData.AUDIO, 'assets/common-consumption/images/sprite.svg#play'],
+  // [mimeTypesData.INTERACTIVE, 'assets/common-consumption/images/sprite.svg#touch'],
+  // [mimeTypesData.DOCS, 'assets/common-consumption/images/sprite.svg#doc'],
 
 }

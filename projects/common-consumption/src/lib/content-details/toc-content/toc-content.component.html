@@ -2,34 +2,48 @@
     <mat-expansion-panel>
         <mat-expansion-panel-header>
             <mat-panel-title>
-                <div>
-                    Learning Objective
+                <div class="content-title sub-heading-one w-90">
+                    {{courseModules.header.title}}
                 </div>
                 <div class="progress-parent">
-                    <ng-container *ngIf="progress === 100">
-                        <i class="icon-svg icon-svg--xs icon-tick mr-8" role="img" aria-label="tick-icon">
+                    <ng-container *ngIf="courseModules.header.progress === 100">
+                        <i class="icon-svg icon-svg--sm icon-tick mr-8" role="img" aria-label="tick-icon">
                             <svg class="icon">
                                 <use xlink:href="assets/common-consumption/images/sprite.svg#circle-with-check-symbol"></use>
                             </svg>
                         </i>
                     </ng-container>
-                    <ng-container *ngIf="progress !== 100">
-                        <div class="mr-8 progress-circle progress-circle--xs" data-percentage="100">
+                    <ng-container *ngIf="courseModules.header.progress !== 100">
+                        <span class="mr-8 progress-circle progress-circle--xs" [attr.data-percentage]="courseModules.header.progress">
                             <svg class="progress-circle__svg" viewport="0 0 2000 2000">
                                 <circle class="progress-circle__stroke" r="50%" cx="50%" cy="50%"></circle>
                                 <circle class="progress-circle__stroke" r="50%" cx="50%" cy="50%"></circle>
                             </svg>
                             <span></span>
-                        </div>
+                        </span>
                     </ng-container>
                     <ng-container>
-                        <div class="total-duration">{{duration}}</div>
+                        <span class="total-duration body-two">{{courseModules.header.totalDuration}}</span>
                     </ng-container>
                 </div>
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <mat-card class="content-details">
-            <mat-checkbox class="example-margin" [color]="'primary'">Check me!</mat-checkbox>
-        </mat-card>
+        <ng-container *ngIf="courseModules.body.length > 0">
+            <mat-card *ngFor="let content of courseModules.body" class="content-details">
+                <mat-checkbox class="example-margin w-90" [color]="'primary'">{{content.name}}</mat-checkbox>
+                <ng-container *ngIf="content.mimeType == 'Video'">
+                    <span class="content-duration">
+                        <span class="content-icon">
+                            <i class="icon-svg icon-svg--sm icon-tick mr-8" role="img" aria-label="tick-icon">
+                                <svg class="icon" width="22px" height="22px">
+                                    <use xlink:href="assets/common-consumption/images/sprite.svg#video"></use>
+                                </svg>
+                            </i>
+                        </span>
+                        <span class="duration body-two">{{content.duration}}</span>
+                    </span>
+                </ng-container>
+            </mat-card>
+        </ng-container>
     </mat-expansion-panel>
 </mat-accordion>
