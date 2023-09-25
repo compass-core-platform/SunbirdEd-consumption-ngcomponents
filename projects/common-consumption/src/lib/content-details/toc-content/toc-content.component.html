@@ -29,7 +29,7 @@
             </mat-panel-title>
         </mat-expansion-panel-header>
         <ng-container *ngIf="courseModules.body.length > 0">
-            <mat-card *ngFor="let content of courseModules.body;let i=index" class="content-details" (click)="selectedContent($event)">
+            <mat-card *ngFor="let content of courseModules.body;let i=index" class="content-details" (click)="selectedContent($event, content)">
                 <mat-checkbox class="custom-checkbox w-90" [color]="'primary'">{{content.name}}</mat-checkbox>
                 <ng-container *ngIf="content.mimeType == 'Video'">
                     <span class="content-duration">
