@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'toc-content',
@@ -7,13 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TocContentComponent implements OnInit {
   @Input() courseModules: any = {};
+  @Output() contentClicked = new EventEmitter<any>()
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  selectedContent(event: any) {
-    console.log("content selected", event);
+  selectedContent(event: any, content: any) {
+    console.log("content selected", content);
+    this.contentClicked.emit({event: event, content: content});
   }
 }
