@@ -13,10 +13,7 @@ export class TocContentComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // [mimeTypesData.COLLECTION, 'assets/common-consumption/images/sprite.svg#doc'],
-  // [mimeTypesData.VIDEO, 'assets/common-consumption/images/sprite.svg#play'],
-  // [mimeTypesData.AUDIO, 'assets/common-consumption/images/sprite.svg#play'],
-  // [mimeTypesData.INTERACTIVE, 'assets/common-consumption/images/sprite.svg#touch'],
-  // [mimeTypesData.DOCS, 'assets/common-consumption/images/sprite.svg#doc'],
-
+  selectedContent(event: any) {
+    console.log("content selected", event);
+  }
 }

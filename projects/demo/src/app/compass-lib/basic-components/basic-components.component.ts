@@ -10,7 +10,7 @@ export class BasicComponentsComponent implements OnInit {
 
     header : {
       title: 'Subordinate Legislation',
-      progress: 25,
+      progress: 67,
       totalDuration: '24m'
     },
     body: [
