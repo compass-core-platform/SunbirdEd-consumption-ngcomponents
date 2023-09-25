@@ -10,19 +10,19 @@ export class BasicComponentsComponent implements OnInit {
 
     header : {
       title: 'Subordinate Legislation',
-      progress: 67,
+      progress: 100,
       totalDuration: '24m'
     },
     body: [
       {
         name: 'Practice questionto test preparedeness-Delegated legislation',
         duration: '11m 28s',
-        mimeType: 'Video'
+        mimeType: 'video/mp4'
       },
       {
         name: 'Overview of Subordinate Legislation',
         duration: '11m 28s',
-        mimeType: 'Video'
+        mimeType: 'application/vnd.sunbird.questionset'
       }
     ]
   }

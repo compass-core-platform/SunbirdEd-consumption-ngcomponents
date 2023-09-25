@@ -45,16 +45,17 @@
                 border: 1px solid var(--com-grey-16);
                 opacity: 1;
                 box-shadow: none;
-                padding: 1.5rem 0.75rem 1.5rem 0.75rem;
+                padding: 1.5rem;
                 margin-top: 1.5rem;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
                 background-color: var(--com-grey-14);
-                ::ng-deep .custom-checkbox.mat-checkbox-checked .mat-checkbox-background {
-                    background-color: var(--com-primary-color);
-                }
+                cursor: pointer;
+                // ::ng-deep .custom-checkbox.mat-checkbox-checked .mat-checkbox-background {
+                //     background-color: var(--com-primary-color);
+                // }
                 .content-duration {
                     display: flex;
                     flex-direction: row;

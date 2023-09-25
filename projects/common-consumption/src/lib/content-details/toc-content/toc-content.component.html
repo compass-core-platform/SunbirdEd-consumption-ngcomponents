@@ -7,11 +7,9 @@
                 </div>
                 <div class="progress-parent">
                     <ng-container *ngIf="courseModules.header.progress === 100">
-                        <i class="icon-svg icon-svg--sm icon-tick mr-8" role="img" aria-label="tick-icon">
-                            <svg class="icon">
-                                <use xlink:href="assets/common-consumption/images/sprite.svg#circle-with-check-symbol"></use>
-                            </svg>
-                        </i>
+                        <svg class="icon icon-svg icon-svg--sm mr-8">
+                            <use xlink:href="assets/images/sprite.svg#circle-with-check-symbol"></use>
+                        </svg>
                     </ng-container>
                     <ng-container *ngIf="courseModules.header.progress !== 100">
                         <span class="mr-8 progress-circle progress-circle--xs" [attr.data-percentage]="100 - courseModules.header.progress">
@@ -30,19 +28,31 @@
         </mat-expansion-panel-header>
         <ng-container *ngIf="courseModules.body.length > 0">
             <mat-card *ngFor="let content of courseModules.body;let i=index" class="content-details" (click)="selectedContent($event, content)">
-                <mat-checkbox class="custom-checkbox w-90" [color]="'primary'">{{content.name}}</mat-checkbox>
-                <ng-container *ngIf="content.mimeType == 'Video'">
+                <span class="custom-checkbox w-90" >{{content.name}}</span>
                     <span class="content-duration">
-                        <span class="content-icon">
-                            <i class="icon-svg icon-svg--sm icon-tick mr-8" role="img" aria-label="tick-icon">
-                                <svg class="icon" width="22px" height="22px">
-                                    <use xlink:href="assets/common-consumption/images/sprite.svg#video"></use>
+                        <ng-container *ngIf="content.mimeType == 'Video'">
+                            <span class="content-icon">
+                                <svg class="icon icon-svg icon-svg--sm mr-8" width="22px" height="22px">
+                                    <use xlink:href="assets/images/sprite.svg#video"></use>
                                 </svg>
-                            </i>
-                        </span>
+                            </span>
+                        </ng-container>
+                        <ng-container *ngIf="content.mimeType == 'Assessment'">
+                            <span class="content-icon">
+                                <svg class="icon icon-svg icon-svg--sm mr-8" width="22px" height="22px">
+                                    <use xlink:href="assets/images/sprite.svg#assessment"></use>
+                                </svg>
+                            </span>
+                        </ng-container>
+                        <ng-container *ngIf="content.mimeType == 'Document'">
+                            <span class="content-icon">
+                                <svg class="icon icon-svg icon-svg--sm mr-8" width="22px" height="22px">
+                                    <use xlink:href="assets/images/sprite.svg#document"></use>
+                                </svg>
+                            </span>
+                        </ng-container>
                         <span class="duration body-two">{{content.duration}}</span>
                     </span>
-                </ng-container>
             </mat-card>
         </ng-container>
     </mat-expansion-panel>
