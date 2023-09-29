@@ -22,7 +22,8 @@ export class BasicComponentsComponent implements OnInit {
       {
         name: 'Overview of Subordinate Legislation',
         duration: '11m 28s',
-        mimeType: 'application/vnd.sunbird.questionset'
+        mimeType: 'application/vnd.sunbird.questionset',
+        bestScore: 1 + '/' + 4
       }
     ]
   }
