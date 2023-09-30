@@ -66,6 +66,9 @@
                         opacity: 1;
                         color: var(--com-grey-60);
                     }
+                    .best-score {
+                      color: var(--accessibility-red);
+                    }
                 }
                 .mat-checkbox-layout {
                     margin-bottom: 0px;
@@ -102,6 +105,12 @@
     -webkit-font-smoothing: antialiased;
     opacity: 1;
 }
+[data-percentage="100"]{
+  .progress-circle__stroke:nth-child(2) {
+    stroke:  none !important;
+    stroke-dasharray: 314.1592%;
+  }
+}
 .progress-circle {
     height: calculateRem(24px);
     width: calculateRem(24px);
@@ -130,7 +139,7 @@
       &:nth-child(2) {
         stroke:  var(--com-progress-green);
         stroke-dasharray: 314.1592%;
-      }
+      }      
     }
     &--xs {
       span {
