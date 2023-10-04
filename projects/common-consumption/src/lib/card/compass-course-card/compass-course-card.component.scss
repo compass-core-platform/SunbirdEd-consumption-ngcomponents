@@ -80,6 +80,24 @@
               margin-top: 15px;
           }
     }
-
+    .mat-card__progressbar {
+        height: calculateRem(4px);
+        margin: 0px 0 0px;
+        border-radius: 0px;
+        // box-shadow: inset 0 calculateRem(-1px) calculateRem(1px) rgba(0, 0, 0, 0.16);
+        box-shadow: inset 0 -0.25rem 0.25rem rgba(0, 0, 0, 0.16);
+        width: 100%;
+        // background: var(--cc-mat-card-progressbar-bg);
+        &>span {
+          display: block;
+          height: 100%;
+        //   background-color: var(--cc-mat-card-card-progressbar-span-bg);
+        //   background-image: -webkit-gradient(center bottom, var(--secondary-400), var(--secondary-200));
+        //   box-shadow: inset 0 calculateRem(2px) calculateRem(9px) grey,
+            // inset 0 calculateRem(-2px) calculateRem(6px) rgba(0, 0, 0, 0.4);
+          position: relative;
+          overflow: hidden;
+        }
+      }
    
 }
