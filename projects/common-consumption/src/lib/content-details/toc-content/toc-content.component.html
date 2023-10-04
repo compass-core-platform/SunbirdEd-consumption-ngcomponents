@@ -31,24 +31,38 @@
                 <span class="custom-checkbox w-90" >{{content.name}}</span>
                     <span class="content-duration">
                         <ng-container *ngIf="!content.bestScore">
-                            <ng-container *ngIf="content.mimeType == 'Video'">
+                            <ng-container *ngIf="type == 'Video'">
                                 <span class="content-icon">
                                     <svg class="icon icon-svg icon-svg--sm mr-8" width="22px" height="22px">
                                         <use xlink:href="assets/images/sprite.svg#video"></use>
                                     </svg>
                                 </span>
                             </ng-container>
-                            <ng-container *ngIf="content.mimeType == 'Assessment'">
+                            <ng-container *ngIf="type == 'Assessment'">
                                 <span class="content-icon">
                                     <svg class="icon icon-svg icon-svg--sm mr-8" width="22px" height="22px">
                                         <use xlink:href="assets/images/sprite.svg#assessment"></use>
                                     </svg>
                                 </span>
                             </ng-container>
-                            <ng-container *ngIf="content.mimeType == 'Document'">
+                            <ng-container *ngIf="type == 'Document'">
                                 <span class="content-icon">
                                     <svg class="icon icon-svg icon-svg--sm mr-8" width="22px" height="22px">
                                         <use xlink:href="assets/images/sprite.svg#document"></use>
+                                    </svg>
+                                </span>
+                            </ng-container>
+                            <ng-container *ngIf="type == 'Audio'">
+                                <span class="content-icon">
+                                    <svg class="icon icon-svg icon-svg--sm mr-8" width="22px" height="22px">
+                                        <use xlink:href="assets/images/sprite.svg#audio"></use>
+                                    </svg>
+                                </span>
+                            </ng-container>
+                            <ng-container *ngIf="type == 'Interactive'">
+                                <span class="content-icon">
+                                    <svg class="icon icon-svg icon-svg--sm mr-8" width="22px" height="22px">
+                                        <use xlink:href="assets/images/sprite.svg#interactive"></use>
                                     </svg>
                                 </span>
                             </ng-container>
