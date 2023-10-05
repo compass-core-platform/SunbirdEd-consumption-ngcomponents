@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { MimeTypeMasterData } from './../../pipes-module/mime-type';
 
 @Component({
   selector: 'toc-content',
@@ -8,6 +9,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class TocContentComponent implements OnInit {
   @Input() courseModules: any = {};
   @Output() contentClicked = new EventEmitter<any>()
+  mimeTypes: any = MimeTypeMasterData
+  type: any;
 
   constructor() { }
 
@@ -18,12 +21,16 @@ export class TocContentComponent implements OnInit {
   getIcons() {
     if(this.courseModules.body.length > 0) {
       this.courseModules.body.forEach((course) => {
-        if(course.mimeType == 'video/mp4') {
-          course.mimeType = 'Video'
-        } else if(course.mimeType == 'application/vnd.ekstep.content-collection' || course.mimeType == 'application/vnd.ekstep.ecml-archive') {
-          course.mimeType = 'Document'
-        } else if(course.mimeType == 'application/vnd.sunbird.questionset') {
-          course.mimeType = 'Assessment'
+        if(this.mimeTypes.VIDEO.includes(course.mimeType)) {
+          this.type = 'Video';
+        } else if(this.mimeTypes.AUDIO.includes(course.mimeType)) {
+          this.type = 'Audio';
+        } else if(this.mimeTypes.DOCS.includes(course.mimeType)) {
+          this.type = 'Document';
+        } else if(this.mimeTypes.QUESTIONSET.includes(course.mimeType)) {
+          this.type = 'Assessment'
+        } else if(this.mimeTypes.INTERACTIVE.includes(course.mimeType)) {
+          this.type = 'Interactive'
         }
       })
     }

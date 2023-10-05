@@ -1,20 +1,22 @@
 <div class="course-card grid">
-    <img class="poster-img ui centered image" src="{{image}}" alt='{{data["name"]}}' />
-    <div class="text-section">
-        <img class="course-icon" src="/assets/images/course-icon.png" alt="course-icon" /> <span
-            class="item-name">{{contentType}}</span>
-        <p class="course-title">{{name}}</p>
-        <p class="category">{{category}}</p>
-        <span *ngIf='data["rating"]' class="rating">{{data["rating"]}}</span> <i *ngIf='data["rating"]'
-            class="star icon"></i> <span *ngIf='data["rating"]' class="dot">.</span>
-        <i *ngIf='duration' class="clock icon"></i> <span class="duration">{{duration}}</span>
-        <!-- <img *ngIf='duration' class="ui image right floated course-dd" src="/assets/images/course-dd.png"
-            alt="course-img" /> -->
+    <div class="course-card-container">
+        <img class="poster-img ui centered image" src="{{image}}" alt='{{data["name"]}}' />
+        <div class="text-section">
+            <img class="course-icon" src="/assets/images/course-icon.png" alt="course-icon" /> <span
+                class="item-name">{{contentType}}</span>
+            <p class="course-title">{{name}}</p>
+            <p class="category">{{category}}</p>
+            <span *ngIf='data["rating"]' class="rating">{{data["rating"]}}</span> <i *ngIf='data["rating"]'
+                class="star icon"></i> <span *ngIf='data["rating"]' class="dot">.</span>
+            <i *ngIf='duration' class="clock icon"></i> <span class="duration">{{duration}}</span>
+            <!-- <img *ngIf='duration' class="ui image right floated course-dd" src="/assets/images/course-dd.png"
+                alt="course-img" /> -->
+        </div>
     </div>
     <div class="progress" *ngIf="showProgress">
         <div class="mat-card__progressbar">
             <span [ngStyle]="fetchProgress()"></span>
-          </div>
+        </div>
         <!-- <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div> -->
     </div>
 </div>
