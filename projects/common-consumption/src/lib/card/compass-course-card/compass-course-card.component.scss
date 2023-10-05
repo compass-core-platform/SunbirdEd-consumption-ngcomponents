@@ -2,14 +2,24 @@
 
 .course-card {
     background-color: #ffffff;
+    .course-card-container {
+        margin-bottom: 2px;
+        border: 1px solid RGBA(0,0,0,.16);
+        border-radius: 4px;
+        box-shadow: 1px 2px RGBA(0,0,0,.06);
+    }
     .course-icon {
         display: inline !important;
     }
     .poster-img {
         height: 280px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
     }
     .text-section {
         margin-top: 20px;
+        padding: 0px 10px;
+        min-height: 120px;
         .course-icon, .course-dd {
             height: 24px;
         }
@@ -82,8 +92,8 @@
     }
     .mat-card__progressbar {
         height: calculateRem(4px);
-        margin: 0px 0 0px;
-        border-radius: 0px;
+        margin-top: 12px;
+        border-radius: 4px;
         // box-shadow: inset 0 calculateRem(-1px) calculateRem(1px) rgba(0, 0, 0, 0.16);
         box-shadow: inset 0 -0.25rem 0.25rem rgba(0, 0, 0, 0.16);
         width: 100%;
