@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 interface cardInfo {
   title?: string,
   type?: string,
@@ -20,6 +20,8 @@ export class PopularCardComponent implements OnInit {
   @Input() data: cardInfo;
   @Input() pillName: string;
   display: boolean = false;
+  @Output() filterChange: EventEmitter<{courseData?: any }> = new EventEmitter();
+  
   constructor() { }
 
   public setDisplay(){
@@ -27,6 +29,10 @@ export class PopularCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  emitFilterChangeEvent(item: any) {
+    this.filterChange.emit(item);
   }
 
 }
