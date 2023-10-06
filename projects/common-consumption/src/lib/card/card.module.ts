@@ -32,6 +32,7 @@ import { CompassCourseCardComponent } from './compass-course-card/compass-course
 import { GoalOrientedHrCardComponent } from './goal-oriented-hr-card/goal-oriented-hr-card.component';
 import { BrowseByCardComponent } from './browse-by-card/browse-by-card.component';
 import { LevelsComponent } from './levels/levels.component';
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { LevelsComponent } from './levels/levels.component';
     MatButtonModule,
     MatIconModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    RouterModule
   ],
   exports: [
     LibraryCardComponent,
