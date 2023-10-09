@@ -65,7 +65,9 @@
 
     //  Mobile
     @media only screen and (max-width: 480px) {
-
+        .img-container {
+            display: none;
+        }
         .left-side {
 
             h1,
