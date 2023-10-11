@@ -8,7 +8,7 @@
                 <img class="icon" src="{{data.icon}}" />
                 <span>{{data.associatedCoursesTxt}}: {{data.noOfCourses}}</span>
             </div>
-            <span *ngIf="data.description" class="w-50 d-flex flex-jc-flex-end">
+            <span *ngIf="data.expand" class="w-50 d-flex flex-jc-flex-end">
                 <button class="com-tertiary-btn" (click)="setDisplay()">{{data.btnText}}<mat-icon *ngIf="!display">keyboard_arrow_down</mat-icon>
                     <mat-icon *ngIf="display">keyboard_arrow_up</mat-icon>
                 </button></span>
