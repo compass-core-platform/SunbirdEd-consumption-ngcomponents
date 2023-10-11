@@ -4,7 +4,7 @@
         <div class="popular-card-competency-type">{{data.type}}</div>
         <div *ngIf="data.description" class="popular-card-competency-description">{{data.description}}</div>
         <div class="popular-card-competency-content">
-            <div class="w-100" [ngClass]="{'w-50': data.expand}">
+            <div class="">
                 <img class="icon" src="{{data.icon}}" />
                 <span>{{data.associatedCoursesTxt}}: {{data.noOfCourses}}</span>
             </div>
