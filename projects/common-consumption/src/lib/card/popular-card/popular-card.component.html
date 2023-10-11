@@ -4,7 +4,7 @@
         <div class="popular-card-competency-type">{{data.type}}</div>
         <div *ngIf="data.description" class="popular-card-competency-description">{{data.description}}</div>
         <div class="popular-card-competency-content">
-            <div class="w-50">
+            <div class="">
                 <img class="icon" src="{{data.icon}}" />
                 <span>{{data.associatedCoursesTxt}}: {{data.noOfCourses}}</span>
             </div>
@@ -14,8 +14,8 @@
                 </button></span>
         </div>
         <div *ngIf="data.expand && data.expandData" class="mt-30">
-            <div *ngIf="display" class="expandContainer d-flex flex-jc-flex-start w-100">
-                <compass-course-card *ngFor="let item of data.expandData" [data]="item" class="cardWidth"></compass-course-card>
+            <div *ngIf="display" class="expandContainer d-flex flex-jc-space-around w-100">
+                <compass-course-card *ngFor="let item of data.expandData" [data]="item" class="cardWidth" (click)="emitFilterChangeEvent(item)"></compass-course-card>
             </div>
         </div>
     </ng-container>

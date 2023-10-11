@@ -1,10 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { IContent, ICardClick, PlatformType } from '../models';
 
 
 @Component({
   selector: 'sb-banner-card-hlist',
   templateUrl: './banner-card.component.html',
+  encapsulation:ViewEncapsulation.ShadowDom,
   styleUrls: ['./banner-card.component.scss']
 })
 export class BannerCardComponent {

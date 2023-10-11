@@ -1,0 +1,78 @@
+<mat-accordion class="toc-content">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <div class="content-title sub-heading-one w-90">
+                    {{courseModules.header.title}}
+                </div>
+                <div class="progress-parent">
+                    <ng-container *ngIf="courseModules.header.progress === 100">
+                        <svg class="icon icon-svg icon-svg--sm mr-8">
+                            <use xlink:href="assets/images/sprite.svg#circle-with-check-symbol"></use>
+                        </svg>
+                    </ng-container>
+                    <ng-container *ngIf="courseModules.header.progress !== 100">
+                        <span class="mr-8 progress-circle progress-circle--xs" [attr.data-percentage]="100 - courseModules.header.progress">
+                            <svg class="progress-circle__svg" viewport="0 0 2000 2000">
+                                <circle class="progress-circle__stroke" r="50%" cx="50%" cy="50%"></circle>
+                                <circle class="progress-circle__stroke" r="50%" cx="50%" cy="50%"></circle>
+                            </svg>
+                            <span></span>
+                        </span>
+                    </ng-container>
+                    <ng-container>
+                        <span class="total-duration body-two">{{courseModules.header.totalDuration}}</span>
+                    </ng-container>
+                </div>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-container *ngIf="courseModules.body.length > 0">
+            <mat-card *ngFor="let content of courseModules.body;let i=index" class="content-details" (click)="selectedContent($event, content)">
+                <span class="custom-checkbox w-90" >{{content.name}}</span>
+                    <span class="content-duration">
+                        <ng-container *ngIf="!content.bestScore">
+                            <ng-container *ngIf="type == 'Video'">
+                                <span class="content-icon">
+                                    <svg class="icon icon-svg icon-svg--sm mr-8" width="22px" height="22px">
+                                        <use xlink:href="assets/images/sprite.svg#video"></use>
+                                    </svg>
+                                </span>
+                            </ng-container>
+                            <ng-container *ngIf="type == 'Assessment'">
+                                <span class="content-icon">
+                                    <svg class="icon icon-svg icon-svg--sm mr-8" width="22px" height="22px">
+                                        <use xlink:href="assets/images/sprite.svg#assessment"></use>
+                                    </svg>
+                                </span>
+                            </ng-container>
+                            <ng-container *ngIf="type == 'Document'">
+                                <span class="content-icon">
+                                    <svg class="icon icon-svg icon-svg--sm mr-8" width="22px" height="22px">
+                                        <use xlink:href="assets/images/sprite.svg#document"></use>
+                                    </svg>
+                                </span>
+                            </ng-container>
+                            <ng-container *ngIf="type == 'Audio'">
+                                <span class="content-icon">
+                                    <svg class="icon icon-svg icon-svg--sm mr-8" width="22px" height="22px">
+                                        <use xlink:href="assets/images/sprite.svg#audio"></use>
+                                    </svg>
+                                </span>
+                            </ng-container>
+                            <ng-container *ngIf="type == 'Interactive'">
+                                <span class="content-icon">
+                                    <svg class="icon icon-svg icon-svg--sm mr-8" width="22px" height="22px">
+                                        <use xlink:href="assets/images/sprite.svg#interactive"></use>
+                                    </svg>
+                                </span>
+                            </ng-container>
+                            <span class="duration body-two">{{content.duration}}</span>
+                        </ng-container>
+                        <ng-container *ngIf="content.bestScore">
+                            <span class="best-score body-two">BEST SCORE {{content.bestScore}}</span>
+                        </ng-container>
+                    </span>
+            </mat-card>
+        </ng-container>
+    </mat-expansion-panel>
+</mat-accordion>

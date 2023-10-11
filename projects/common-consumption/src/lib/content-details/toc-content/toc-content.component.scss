@@ -1,0 +1,215 @@
+// @use "~@project-sunbird/sb-styles/assets/mixins/mixins" as *;
+@use "compass-sb-styles/assets/mixins/mixins"as *;
+
+.toc-content {
+    mat-expansion-panel {
+        border-radius: 0px;
+        border: 1px solid var(--com-grey-16);
+        opacity: 1;
+        box-shadow: none;
+        mat-expansion-panel-header {
+            height: auto !important;
+            padding: 1.5rem;
+            flex-direction: row-reverse;
+            align-items: initial;
+            font-size: 12px;
+            ::ng-deep span.mat-content {
+                padding-left: 1.25rem;
+                mat-panel-title {
+                    justify-content: space-between;
+                    margin-right: 0px;
+                    .progress-parent {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        .icon-svg {
+                            top: 0;
+                        }
+                        .total-duration {
+                            opacity: 1;
+                            color: var(--com-grey-60);
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+        ::ng-deep mat-expansion-panel-header.mat-expanded:focus, .mat-expansion-panel-header.mat-expanded {
+            background-color: var(--com-grey-14);
+        }
+        ::ng-deep .mat-expansion-panel-body {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            mat-card.content-details {
+                border-radius: 0px;
+                border: 1px solid var(--com-grey-16);
+                opacity: 1;
+                box-shadow: none;
+                padding: 1.5rem;
+                margin-top: 1.5rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                background-color: var(--com-grey-14);
+                cursor: pointer;
+                // ::ng-deep .custom-checkbox.mat-checkbox-checked .mat-checkbox-background {
+                //     background-color: var(--com-primary-color);
+                // }
+                .content-duration {
+                    display: flex;
+                    flex-direction: row;
+                    text-wrap: nowrap;
+                    opacity: 1;
+                    color: var(--com-grey-60);  
+                    .duration {
+                        opacity: 1;
+                        color: var(--com-grey-60);
+                    }
+                    .best-score {
+                      color: var(--accessibility-red);
+                    }
+                }
+                .mat-checkbox-layout {
+                    margin-bottom: 0px;
+                    @include typography(var(--font-com-lato), 16px, 400, 0.25px, 24px);
+                    opacity: 1;
+                    color: var(--com-grey-87);
+                    text-align: left;
+                    white-space: inherit;
+                    ::ng-deep .mat-checkbox-inner-container {
+                        margin-right: 16px;
+                    }
+                }
+                .content-icon {
+                    opacity: 1;
+                    color: var(--com-grey-60);
+                    text-align: left;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    .icon-svg {
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+.icon-svg {
+    position: relative;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    opacity: 1;
+}
+[data-percentage="100"]{
+  .progress-circle__stroke:nth-child(2) {
+    stroke:  none !important;
+    stroke-dasharray: 314.1592%;
+  }
+}
+.progress-circle {
+    height: calculateRem(24px);
+    width: calculateRem(24px);
+    position: relative;
+    span {
+      position: absolute;
+      font-size: calculateRem(8px);
+      font-weight: bold;
+      margin: 0 auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &__svg {
+      border-radius: 50%;
+      height: 100%;
+      transform: scaleX(-1) rotate(-90deg);
+      width: 100%;
+    }
+    &__stroke {
+      fill: none;
+      stroke-width: calculateRem(8px);
+      &:nth-child(1) {
+        stroke: var(--com-grey-16);
+      }
+      &:nth-child(2) {
+        stroke:  var(--com-progress-green);
+        stroke-dasharray: 314.1592%;
+      }      
+    }
+    &--xs {
+      span {
+        display: none;
+      }
+    }
+    &--xs {
+      height: calculateRem(24px);
+      width: calculateRem(24px);
+      .progress-circle__stroke {
+        stroke-width: calculateRem(8px);
+      }
+    }
+    &--sm {
+      height: calculateRem(32px);
+      width: calculateRem(32px);
+      .progress-circle__stroke {
+        stroke-width: calculateRem(8px);
+      }
+    }
+    &--md {
+      height: calculateRem(48px);
+      width: calculateRem(48px);
+      .progress-circle__stroke {
+        stroke-width: calculateRem(12px);
+      }
+      span {
+        font-size: calculateRem(10px);
+      }
+    }
+    &--lg {
+      height: calculateRem(64px);
+      width: calculateRem(64px);
+      .progress-circle__stroke {
+        stroke-width: calculateRem(16px);
+      }
+      span {
+        font-size: calculateRem(14px);
+      }
+    }
+    &--xl {
+      height: calculateRem(72px);
+      width: calculateRem(72px);
+      .progress-circle__stroke {
+        stroke-width: calculateRem(20px);
+      }
+      span {
+        font-size: calculateRem(18px);
+      }
+    }
+    &--xxl {
+      height: calculateRem(88px);
+      width: calculateRem(88px);
+      .progress-circle__stroke {
+        stroke-width: calculateRem(24px);
+      }
+      span {
+        font-size: calculateRem(20px);
+      }
+    }
+    @for $i from 0 to 100 {
+      &[data-percentage="#{$i}"] {
+        .progress-circle__stroke:nth-child(2) {
+          stroke-dashoffset: calc(-314.1592% * (#{$i} / 100));
+        }
+      }
+    }
+    &--success {
+      img.icon_progress_check {
+        width:100%;
+      }
+    }
+  }

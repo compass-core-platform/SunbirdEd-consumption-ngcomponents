@@ -6,12 +6,14 @@
     padding: calculateRem(24px) calculateRem(20px);
     text-align: left;
     &-competency-name {
-        @include typography(var(--font-com-en), 16px, 600, 0.12px, 24px);
+        @include typography(var(--font-com-en), 20px, 600, 0.12px, 28px);
         font-style: normal;
         margin-bottom: calculateRem(4px);
+        min-height: 48px;
     }
     &-competency-type, &-competency-content {
-        @include typography(var(--font-com-lato), 12px, 400, 0.25px, 16px);
+        @include typography(var(--font-com-lato), 14px, 700, 0.25px, 20px);
+        margin-bottom: 14px;
     }
     &-competency-content {
         opacity: 1;
@@ -37,15 +39,14 @@
         font-style: normal;
     }
     &-competency-description{
-        @include typography(var(--font-com-lato), 14px, 400, 0.25px, 16px);
+        @include typography(var(--font-com-lato), 14px, 400, 0.25px, 20px);
     }
 }
 .expandContainer{
     flex-wrap: wrap;
 }
 .cardWidth{
-    width:420px;
-    max-width: 420px;
+    width:45%;
     box-sizing: border-box;
     margin: 16px;
 }
