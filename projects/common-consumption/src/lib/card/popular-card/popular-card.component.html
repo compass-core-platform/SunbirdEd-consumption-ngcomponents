@@ -14,7 +14,7 @@
                 </button></span>
         </div>
         <div *ngIf="data.expand && data.expandData" class="mt-30">
-            <div *ngIf="display" class="expandContainer d-flex flex-jc-space-around w-100">
+            <div *ngIf="display" class="expandContainer d-flex flex-jc-flex-start w-100">
                 <compass-course-card *ngFor="let item of data.expandData" [data]="item" class="cardWidth" (click)="emitFilterChangeEvent(item)"></compass-course-card>
             </div>
         </div>
