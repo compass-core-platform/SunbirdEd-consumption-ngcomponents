@@ -40,4 +40,11 @@ export class TocContentComponent implements OnInit {
     console.log("content selected", content);
     this.contentClicked.emit({event: event, content: content});
   }
+
+  getText(val: any) {
+    if(val == 0 || !val) {
+      return 'Not started'
+    }
+    return val+'% completed';
+  }
 }
