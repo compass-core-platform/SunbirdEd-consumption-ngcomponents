@@ -9,6 +9,7 @@
         @include typography(var(--font-com-en), 20px, 600, 0.12px, 28px);
         font-style: normal;
         margin-bottom: calculateRem(4px);
+        min-height: 48px;
     }
     &-competency-type, &-competency-content {
         @include typography(var(--font-com-lato), 14px, 700, 0.25px, 20px);
