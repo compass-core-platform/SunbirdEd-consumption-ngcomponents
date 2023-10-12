@@ -1,7 +1,7 @@
 <section class="ui container info-card" [ngClass]="{'img-position': cardInfo.data.position === 'left'}">
-        <img src="{{cardInfo.imageUrl}}"  class="info-card__img" />
-        <div class="info-card__text">
-            <h1 class="title">{{cardInfo.data.title}}</h1>
+        <img src="{{cardInfo.imageUrl}}"  class="info-card__img w-50" />
+        <div class="info-card__text w-50">
+            <h1 class="title mb-24">{{cardInfo.data.title}}</h1>
             <p class="body-one">{{cardInfo.data.text}}</p>
         </div>
 </section>
