@@ -48,7 +48,8 @@ export class MemberCardComponent implements OnInit {
     }
     return {
       'border-color': this.paletteList[this.indexOfMember],
-      'color': this.paletteList[this.indexOfMember]
+      'color': this.paletteList[this.indexOfMember],
+      'background-color' : '#ffffff'
     };
   }
   onClick(event: MouseEvent) {
