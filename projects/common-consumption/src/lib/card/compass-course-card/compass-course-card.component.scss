@@ -19,7 +19,7 @@
     .text-section {
         margin-top: 20px;
         padding: 0px 10px;
-        min-height: 120px;
+        min-height: 130px;
         .course-icon, .course-dd {
             height: 24px;
         }
@@ -92,7 +92,7 @@
     }
     .mat-card__progressbar {
         height: calculateRem(4px);
-        margin-top: 12px;
+        margin-top: 10px;
         border-radius: 4px;
         // box-shadow: inset 0 calculateRem(-1px) calculateRem(1px) rgba(0, 0, 0, 0.16);
         box-shadow: inset 0 -0.25rem 0.25rem rgba(0, 0, 0, 0.16);
