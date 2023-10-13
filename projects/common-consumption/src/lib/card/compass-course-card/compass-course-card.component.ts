@@ -14,8 +14,8 @@ export class CompassCourseCardComponent implements OnInit {
   image: string = "/assets/images/course-1.png";
   showProgress: boolean = false;
   completionPercentage: any;
-  contentType:string;
-  duration:string;
+  contentType: string;
+  duration: string;
 
   constructor() { }
 
@@ -60,17 +60,26 @@ export class CompassCourseCardComponent implements OnInit {
   fetchProgress() {
     var bgColor = "#024f9d";
     // var endDate = (this.course.batch!=null && this.course.batch.endDate!=null)?new Date(this.course.batch.endDate):null;
-    if(this.completionPercentage == "100") {
+    if (this.completionPercentage == "100") {
       bgColor = "#07bc81"; // green
-    } 
+    }
     // else if (endDate!=null && endDate < new Date()) {
     //   bgColor = "#ff4558"; // red
     // }
-    let widthStyle = this.completionPercentage+"%";
+    let widthStyle = this.completionPercentage + "%";
     return {
       width: widthStyle,
-      'background-color':bgColor
+      'background-color': bgColor
     };
   }
 
+  getText(percentage: any) {
+    if (percentage == 0) {
+      return 'Not started'
+    } else if (percentage == 100) {
+      return 'Completed'
+    } else {
+      return percentage + '% completed'
+    }
+  }
 }
