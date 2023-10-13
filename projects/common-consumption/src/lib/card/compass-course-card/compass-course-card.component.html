@@ -11,12 +11,12 @@
             <i *ngIf='duration' class="clock icon"></i> <span class="duration">{{duration}}</span>
             <!-- <img *ngIf='duration' class="ui image right floated course-dd" src="/assets/images/course-dd.png"
                 alt="course-img" /> -->
+            <div class="progress" *ngIf="showProgress">
+                <div class="mat-card__progressbar">
+                    <span [ngStyle]="fetchProgress()"></span>
+                </div>
+                <!-- <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div> -->
+            </div>
         </div>
-    </div>
-    <div class="progress" *ngIf="showProgress">
-        <div class="mat-card__progressbar">
-            <span [ngStyle]="fetchProgress()"></span>
-        </div>
-        <!-- <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div> -->
     </div>
 </div>
