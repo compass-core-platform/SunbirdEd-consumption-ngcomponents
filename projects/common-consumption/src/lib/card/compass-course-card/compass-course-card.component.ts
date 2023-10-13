@@ -74,6 +74,9 @@ export class CompassCourseCardComponent implements OnInit {
   }
 
   getText(percentage: any) {
+    if(!percentage) {
+      return 'Not started'
+    }
     if (percentage == 0) {
       return 'Not started'
     } else if (percentage == 100) {
