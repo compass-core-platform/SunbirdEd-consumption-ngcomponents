@@ -7,12 +7,14 @@
                 </div>
                 <div class="progress-parent">
                     <ng-container *ngIf="courseModules.header.progress === 100">
-                        <svg class="icon icon-svg icon-svg--sm mr-8">
-                            <use xlink:href="assets/images/sprite.svg#circle-with-check-symbol"></use>
-                        </svg>
+                        <span class="completed-icon" title="Completed">
+                            <svg class="icon icon-svg icon-svg--sm mr-8">
+                                <use xlink:href="assets/images/sprite.svg#circle-with-check-symbol"></use>
+                            </svg>
+                        </span>
                     </ng-container>
                     <ng-container *ngIf="courseModules.header.progress !== 100">
-                        <span class="mr-8 progress-circle progress-circle--xs" [attr.data-percentage]="100 - courseModules.header.progress">
+                        <span class="mr-8 progress-circle progress-circle--xs" title="{{getText(courseModules.header.progress)}}" [attr.data-percentage]="100 - courseModules.header.progress">
                             <svg class="progress-circle__svg" viewport="0 0 2000 2000">
                                 <circle class="progress-circle__stroke" r="50%" cx="50%" cy="50%"></circle>
                                 <circle class="progress-circle__stroke" r="50%" cx="50%" cy="50%"></circle>
