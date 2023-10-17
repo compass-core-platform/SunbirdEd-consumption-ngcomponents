@@ -22,9 +22,9 @@ export class CompassCourseCardComponent implements OnInit {
   ngOnInit(): void {
     if (this.data["enrolledDate"] == undefined) {
       this.name = this.data['name'];
-      if (this.data["targetTaxonomyCategory4Ids"] !== undefined) {
-        if (this.data["targetTaxonomyCategory4Ids"].length > 0) {
-          this.category = this.data['targetTaxonomyCategory4Ids'][0];
+      if (this.data["competencyIdsMapping"] !== undefined) {
+        if (this.data["competencyIdsMapping"].length > 0) {
+          this.category = this.data['competencyIdsMapping'][0];
         }
       }
       if (this.data['posterImage'] !== undefined) {
@@ -38,9 +38,9 @@ export class CompassCourseCardComponent implements OnInit {
     } else {
       this.showProgress = true;
       this.name = this.data['courseName'];
-      if (this.data['content']["targetTaxonomyCategory4Ids"] !== undefined) {
-        if (this.data['content']['targetTaxonomyCategory4Ids'].length > 0) {
-          this.category = this.data['content']['targetTaxonomyCategory4Ids'][0];
+      if (this.data['content']["competencyIdsMapping"] !== undefined) {
+        if (this.data['content']['competencyIdsMapping'].length > 0) {
+          this.category = this.data['content']['competencyIdsMapping'][0];
         }
       }
       if (this.data['content']['posterImage'] !== undefined) {

@@ -5,7 +5,7 @@
             <img class="course-icon" src="/assets/images/course-icon.png" alt="course-icon" /> <span
                 class="item-name">{{contentType}}</span>
             <p class="course-title">{{name}}</p>
-            <p class="category">{{category}}</p>
+            <p class="category" *ngIf="category">{{category}}</p>
             <span *ngIf='data["rating"]' class="rating">{{data["rating"]}}</span> <i *ngIf='data["rating"]'
                 class="star icon"></i> <span *ngIf='data["rating"]' class="dot">.</span>
             <i *ngIf='duration' class="clock icon"></i> <span class="duration">{{duration}}</span>
