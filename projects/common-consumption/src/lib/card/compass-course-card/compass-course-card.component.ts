@@ -20,11 +20,11 @@ export class CompassCourseCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    if (this.data["enrolledDate"] == undefined) {
+    if (this.data["enrolledDate"] == undefined && this.data["status"] == undefined) {
       this.name = this.data['name'];
-      if (this.data["targetTaxonomyCategory4Ids"] !== undefined) {
-        if (this.data["targetTaxonomyCategory4Ids"].length > 0) {
-          this.category = this.data['targetTaxonomyCategory4Ids'][0];
+      if (this.data["competencyIdsMapping"] !== undefined) {
+        if (this.data["competencyIdsMapping"].length > 0) {
+          this.category = this.data['competencyIdsMapping'][0];
         }
       }
       if (this.data['posterImage'] !== undefined) {
@@ -36,11 +36,13 @@ export class CompassCourseCardComponent implements OnInit {
       }
       // this.category = this.data['targetTaxonomyCategory4Ids'][0];
     } else {
-      this.showProgress = true;
+      if (this.data['completionPercentage'] > 0) {
+        this.showProgress = true;
+      }
       this.name = this.data['courseName'];
-      if (this.data['content']["targetTaxonomyCategory4Ids"] !== undefined) {
-        if (this.data['content']['targetTaxonomyCategory4Ids'].length > 0) {
-          this.category = this.data['content']['targetTaxonomyCategory4Ids'][0];
+      if (this.data['content']["competencyIdsMapping"] !== undefined) {
+        if (this.data['content']['competencyIdsMapping'].length > 0) {
+          this.category = this.data['content']['competencyIdsMapping'][0];
         }
       }
       if (this.data['content']['posterImage'] !== undefined) {
@@ -74,6 +76,9 @@ export class CompassCourseCardComponent implements OnInit {
   }
 
   getText(percentage: any) {
+    if (!percentage) {
+      return 'Not started'
+    }
     if (percentage == 0) {
       return 'Not started'
     } else if (percentage == 100) {
