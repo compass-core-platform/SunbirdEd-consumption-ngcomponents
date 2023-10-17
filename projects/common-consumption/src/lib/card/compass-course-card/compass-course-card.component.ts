@@ -20,7 +20,7 @@ export class CompassCourseCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    if (this.data["enrolledDate"] == undefined) {
+    if (this.data["enrolledDate"] == undefined && this.data["status"] == undefined) {
       this.name = this.data['name'];
       if (this.data["competencyIdsMapping"] !== undefined) {
         if (this.data["competencyIdsMapping"].length > 0) {
@@ -36,7 +36,9 @@ export class CompassCourseCardComponent implements OnInit {
       }
       // this.category = this.data['targetTaxonomyCategory4Ids'][0];
     } else {
-      this.showProgress = true;
+      if (this.data['completionPercentage'] > 0) {
+        this.showProgress = true;
+      }
       this.name = this.data['courseName'];
       if (this.data['content']["competencyIdsMapping"] !== undefined) {
         if (this.data['content']['competencyIdsMapping'].length > 0) {
@@ -74,7 +76,7 @@ export class CompassCourseCardComponent implements OnInit {
   }
 
   getText(percentage: any) {
-    if(!percentage) {
+    if (!percentage) {
       return 'Not started'
     }
     if (percentage == 0) {
