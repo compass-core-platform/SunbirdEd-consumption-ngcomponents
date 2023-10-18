@@ -23,6 +23,7 @@ export class MemberCardComponent implements OnInit {
   @Input() progressSize;
   @Input() isLoading:boolean;
   @Input() config={size:'medium', isBold:false, isSelectable:true, view:"vertical", progressSize:"sm"}
+  @Input() designation: string = "Designation";
   @Output() menuClick: EventEmitter<ICardClick> = new EventEmitter();
   @Output() cardClick: EventEmitter<ICardClick> = new EventEmitter();
 

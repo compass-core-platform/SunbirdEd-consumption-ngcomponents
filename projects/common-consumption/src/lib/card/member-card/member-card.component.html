@@ -44,8 +44,11 @@
   [ngClass]="{'member-card--bold': config.isBold, 'selectElement bgcolor-accent': config.isSelectable && selected}" *ngIf="!isLoading"
   (click)="onClick($event)" tabindex="0">
   <mat-card-header>
-    <div mat-card-avatar [ngStyle]="fetchStyle()"><span>{{initial}}</span></div>
-    <mat-card-title>{{title}}</mat-card-title>
+    <div mat-card-avatar class="icon-style"><span>{{initial}}</span></div>
+    <div class="mat-card-header-text">
+      <mat-card-title>{{title}}</mat-card-title>
+    </div>
+    <div class="designation">{{designation}}</div>
     <div class="d-flex flex-ai-center pr-8 ml-auto" *ngIf="config.view == 'horizontal'">
       <div *ngIf="isAdmin || isMenu" class="d-flex flex-ai-center">
         <div [style.visibility]="isAdmin ? 'visible' : 'hidden'" class="color-success border-success status mat-bg-white"

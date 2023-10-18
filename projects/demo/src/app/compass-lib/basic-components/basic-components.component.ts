@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./basic-components.component.scss']
 })
 export class BasicComponentsComponent implements OnInit {
+  cardConfig = {
+    size: "medium",
+    isSelectable: false,
+    view: "horizontal",
+    isBold: true
+  };
   tocContent = {
 
     header : {
