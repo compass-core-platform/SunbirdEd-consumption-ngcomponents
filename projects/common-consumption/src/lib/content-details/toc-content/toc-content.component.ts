@@ -38,7 +38,7 @@ export class TocContentComponent implements OnInit {
 
   selectedContent(event: any, content: any) {
     console.log("content selected", content);
-    this.contentClicked.emit({event: event, content: content});
+    this.contentClicked.emit({event: event, content: content, header: this.courseModules.header});
   }
 
   getText(val: any) {
