@@ -1,6 +1,8 @@
 <div class="course-card grid">
     <div class="course-card-container">
-        <img class="poster-img ui centered image" src="{{image}}" alt='{{data["name"]}}' />
+        <div class="poster-image-container">
+            <img class="poster-img ui centered image" src="{{image}}" alt='{{data["name"]}}' />
+        </div>
         <div class="text-section">
             <img class="course-icon" src="/assets/images/course-icon.png" alt="course-icon" /> 
             <span class="item-name">{{contentType === 'SelfAssess' ? 'Assessment': contentType}}</span>
