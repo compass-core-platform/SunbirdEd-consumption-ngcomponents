@@ -36,26 +36,43 @@ export class CompassCourseCardComponent implements OnInit {
       }
       // this.category = this.data['targetTaxonomyCategory4Ids'][0];
     } else {
-      if (this.data['completionPercentage'] > 0) {
-        this.showProgress = true;
-      }
-      this.name = this.data['courseName'];
-      if (this.data['content']["competencyIdsMapping"] !== undefined) {
-        if (this.data['content']['competencyIdsMapping'].length > 0) {
-          this.category = this.data['content']['competencyIdsMapping'][0];
+      if(this.data["content"]){
+        if (this.data['completionPercentage'] > 0) {
+          this.showProgress = true;
+        }
+        this.name = this.data['courseName'];
+        if (this.data['content']["competencyIdsMapping"] !== undefined) {
+          if (this.data['content']['competencyIdsMapping'].length > 0) {
+            this.category = this.data['content']['competencyIdsMapping'][0];
+          }
+        }
+        if (this.data['content']['posterImage'] !== undefined) {
+          this.image = this.data['content']['posterImage'];
+        }
+        if (this.data['completionPercentage'] !== undefined) {
+          this.completionPercentage = this.data['completionPercentage'];
+        }
+        this.contentType = this.data['content']['contentType'];
+        if (this.data['content']['Duration'] !== undefined) {
+          this.duration = this.data['content']['Duration'];
+        }
+        // this.category = this.data['content']['targetTaxonomyCategory4Ids'][0];
+      } else {
+        this.name = this.data['name'];
+      if (this.data["competencyIdsMapping"] !== undefined) {
+        if (this.data["competencyIdsMapping"].length > 0) {
+          this.category = this.data['competencyIdsMapping'][0];
         }
       }
-      if (this.data['content']['posterImage'] !== undefined) {
-        this.image = this.data['content']['posterImage'];
+      if (this.data['posterImage'] !== undefined) {
+        this.image = this.data['posterImage'];
       }
-      if (this.data['completionPercentage'] !== undefined) {
-        this.completionPercentage = this.data['completionPercentage'];
+      this.contentType = this.data['contentType'];
+      if (this.data['Duration'] !== undefined) {
+        this.duration = this.data['Duration'];
       }
-      this.contentType = this.data['content']['contentType'];
-      if (this.data['content']['Duration'] !== undefined) {
-        this.duration = this.data['content']['Duration'];
+      // this.category = this.data['targetTaxonomyCategory4Ids'][0];
       }
-      // this.category = this.data['content']['targetTaxonomyCategory4Ids'][0];
     }
   }
 

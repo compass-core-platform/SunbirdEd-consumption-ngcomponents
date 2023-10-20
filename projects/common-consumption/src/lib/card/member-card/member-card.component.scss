@@ -176,6 +176,9 @@
 }
 
 /* New Angular material member card style */
+.mat-card-header-text{
+  margin-top: 16px;
+}
 :host {
   .mat-card {
     &.member-card {
@@ -186,8 +189,12 @@
       transition: all ease-in .3s;
 
       .mat-card-header {
-        display: flex;
-        align-items: center;
+        display: block;
+        // align-items: center;
+        .icon-style{
+          background-color: var(--white);
+          color: #2386fc;
+        }
       }
       .status {
         border: calculateRem(1px) solid;
@@ -206,6 +213,7 @@
         box-shadow: 0 0 6px 0 rgba(0,0,0,.1);
         font-weight: 700;
         text-transform: uppercase;
+        margin: 0 16px;
       }
 
       .mat-card-title {
@@ -290,6 +298,26 @@
     
         .mat-card-title {
           font-size: calculateRem(16px);
+          opacity: 1;
+          color: rgba(255,255,255,0.95);
+          font-size: 20px;
+          font-weight: 600;
+          font-style: normal;
+          letter-spacing: 0.12px;
+          text-align: left;
+          line-height: 28px;
+        }
+
+        .designation{
+          opacity: 1;
+          color: rgba(255,255,255,0.95);
+          font-size: 14px;
+          font-weight: 400;
+          font-style: normal;
+          letter-spacing: 0.25px;
+          text-align: left;
+          line-height: 20px;
+          margin: 8px 16px;
         }
     
         .selected img {
