@@ -4,6 +4,7 @@
     @include border(border,1px,var(--com-grey-border) !important);
     opacity: 1;
     padding: calculateRem(24px) calculateRem(20px);
+    background: #ffffff;
     text-align: left;
     &-competency-name {
         @include typography(var(--font-com-en), 20px, 600, 0.12px, 28px);
