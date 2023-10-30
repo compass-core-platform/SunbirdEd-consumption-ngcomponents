@@ -13,6 +13,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.config = {
       className:'dark-background',
+      primaryCategory:"Course",
       contentType:'course',
       title:'Compass shared component',
       description:'Course overview page description',

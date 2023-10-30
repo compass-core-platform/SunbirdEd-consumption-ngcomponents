@@ -16,6 +16,7 @@ export class CompassCourseCardComponent implements OnInit {
   completionPercentage: any;
   contentType: string;
   duration: string;
+  primaryCategory: string;
 
   constructor() { }
 
@@ -31,6 +32,7 @@ export class CompassCourseCardComponent implements OnInit {
         this.image = this.data['posterImage'];
       }
       this.contentType = this.data['contentType'];
+      this.primaryCategory = this.data['primaryCategory'];
       if (this.data['Duration'] !== undefined) {
         this.duration = this.data['Duration'];
       }
@@ -53,6 +55,7 @@ export class CompassCourseCardComponent implements OnInit {
           this.completionPercentage = this.data['completionPercentage'];
         }
         this.contentType = this.data['content']['contentType'];
+        this.primaryCategory = this.data['content']['primaryCategory'];
         if (this.data['content']['Duration'] !== undefined) {
           this.duration = this.data['content']['Duration'];
         }
@@ -68,6 +71,7 @@ export class CompassCourseCardComponent implements OnInit {
         this.image = this.data['posterImage'];
       }
       this.contentType = this.data['contentType'];
+      this.primaryCategory = this.data['primaryCategory'];
       if (this.data['Duration'] !== undefined) {
         this.duration = this.data['Duration'];
       }
