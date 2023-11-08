@@ -2,16 +2,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class MimeTypeMasterData {
   public static readonly COLLECTION = 'application/vnd.ekstep.content-collection';
   public static readonly VIDEO = ['video/avi', 'video/mpeg', 'video/quicktime', 'video/3gpp', 'video/mpeg', 'video/mp4',
-    'video/ogg', 'video/webm'];
+    'video/ogg', 'video/webm', 'application/vnd.ekstep.html-archive', 'application/vnd.ekstep.ecml-archive'];
   public static readonly AUDIO = ['audio/mp3', 'audio/mp4', 'audio/mpeg', 'audio/ogg', 'audio/webm', 'audio/x-wav', 'audio/wav'];
-  public static readonly INTERACTIVE = ['application/vnd.ekstep.ecml-archive', 'application/vnd.ekstep.html-archive',
-    'application/vnd.android.package-archive', 'application/vnd.ekstep.content-archive',
+  public static readonly INTERACTIVE = ['application/vnd.android.package-archive', 'application/vnd.ekstep.content-archive',
     'application/vnd.ekstep.plugin-archive', 'application/vnd.ekstep.h5p-archive'];
   public static readonly DOCS = ['application/pdf', 'application/epub', 'application/msword'];
   public static readonly QUESTIONSET = ['application/vnd.sunbird.questionset'];
   public static readonly ALL = ['video/mp4', 'video/x-youtube', 'video/webm', 'application/pdf', 'application/epub',
-    'application/pdf', 'application/epub', 'application/vnd.ekstep.ecml-archive', 'application/vnd.ekstep.h5p-archive',
-    'application/vnd.ekstep.html-archive','application/vnd.sunbird.questionset', 'audio/mp3', 'audio/mp4', 'audio/mpeg', 'audio/ogg', 'audio/webm', 'audio/x-wav', 'audio/wav'
+    'application/pdf', 'application/epub', 'application/vnd.ekstep.h5p-archive','application/vnd.sunbird.questionset', 'audio/mp3', 'audio/mp4', 'audio/mpeg', 'audio/ogg', 'audio/webm', 'audio/x-wav', 'audio/wav'
   ];
 }
 
