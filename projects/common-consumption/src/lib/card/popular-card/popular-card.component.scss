@@ -10,7 +10,7 @@
         @include typography(var(--font-com-en), 20px, 600, 0.12px, 28px);
         font-style: normal;
         margin-bottom: calculateRem(4px);
-        min-height: 48px;
+        height: 55px;
     }
     &-competency-type, &-competency-content {
         @include typography(var(--font-com-lato), 14px, 700, 0.25px, 20px);
@@ -61,5 +61,26 @@
     }
     .expandContainer{
         justify-content: center!important;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .popular-card {
+        &-competency-name {
+            height: 80px;
+        }
+    }
+}
+@media only screen and (max-width: 1025px) {
+    .popular-card {
+        &-competency-name {
+            height: 98px;
+        }
+    }
+}
+@media only screen and (max-width: 876px) {
+    .popular-card {
+        &-competency-name {
+            height: 50px;
+        }
     }
 }
