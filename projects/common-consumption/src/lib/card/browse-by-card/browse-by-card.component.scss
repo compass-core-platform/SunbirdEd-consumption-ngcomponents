@@ -16,6 +16,7 @@
     @include typography(var(--fon-com-en), 16px, 600, 0.12px, 24px);
     color: rgba(0,0,0,0.87);
     text-align: left;
+    margin-bottom: 0;
 }
 
 .desc{
