@@ -81,7 +81,8 @@ export class CompassLandingPageComponent implements OnInit {
     },
     browseData: {
       iconUrl: "assets/common-consumption/images/topic.png",
-      title: "Topic"
+      title: "Topic",
+      description: "Empower civil servants to learn anywhere, anytime and bridge their competency gaps using impactful and engaging learning products"
     }
   };
 

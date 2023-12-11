@@ -1,13 +1,27 @@
+@use "compass-sb-styles/assets/mixins/mixins"as *;
 .container{
     display: grid;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #EBEBEB;
-    height: 120px;
+    // background-color: #EBEBEB;
+    min-height: 149px;
+    padding: 24px;
+    background-image: url('assets/images/browse-by-bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center
 }
 .title{
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.25px;
+    @include typography(var(--fon-com-en), 16px, 600, 0.12px, 24px);
+    color: rgba(0,0,0,0.87);
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.desc{
+    @include typography(var(--font-com-lato), 14px, 400, 0.25px, 20px);
+    color: rgba(0,0,0,0.6);
+    font-style: normal;
+    text-align: left;
 }

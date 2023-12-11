@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 interface CardInfo {
   iconUrl: string;
   title: string;
+  description: string;
 }
 
 @Component({
