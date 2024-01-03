@@ -5,13 +5,14 @@
     margin-bottom: 2rem;
     &__img{ 
         border-radius: 4px;
+        width: 50%;
     }
     &__text {
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 50%;
-        margin-left:24px;
+        margin-left:4rem;
         h1 {
             font-size: 1.4rem;
             font-weight: 600;
@@ -47,6 +48,9 @@
         }
         &.img-position {
             flex-direction: column;
+        }
+        &__img{ 
+            width: 100%;
         }
     }
    
