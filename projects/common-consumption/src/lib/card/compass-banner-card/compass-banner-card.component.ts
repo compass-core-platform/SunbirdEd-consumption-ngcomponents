@@ -12,14 +12,16 @@ export class CompassBannerCardComponent implements OnInit {
   @Input() loginCallback: (args: any) => void;
   @Input() registerCallback: (args: any) => void;
   @Output() wishList : EventEmitter<any> = new EventEmitter();
+  isWishListed: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
   
-  addwhishList(){
-    this.wishList.emit('add')
+  addwhishList(option: string){
+    this.isWishListed = !this.isWishListed;
+    this.wishList.emit(option);
   }
 
 }

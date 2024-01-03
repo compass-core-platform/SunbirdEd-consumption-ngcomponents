@@ -84,11 +84,19 @@
             font-size: 20px;
         }
 
+        .heart-icon-selected {
+            color: rgba(254, 45, 155, 1);
+        }
+        .heart-icon-selected, .heart-icon-unselected {
+            float: right;
+        }
+
         .dot {
             color: rgba(0, 0, 0, 0.6);
-            font-size: 30px;
+            font-size: 16px;
             margin-left: 8px;
             margin-right: 8px;
+            font-weight: 1000;
         }
 
         .right.floated {
