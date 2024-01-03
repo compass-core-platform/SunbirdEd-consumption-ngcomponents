@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'compass-course-card',
@@ -9,6 +9,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CompassCourseCardComponent implements OnInit {
 
   @Input() data: object;
+  @Input() showIcon: boolean = true;
+  @Output() courseCardClicked = new EventEmitter<any>();
+  @Output() favoriteIconClicked = new EventEmitter<string>()
   name: string;
   category: string;
   image: string = "/assets/images/course-1.png";
@@ -17,6 +20,8 @@ export class CompassCourseCardComponent implements OnInit {
   contentType: string;
   duration: string;
   primaryCategory: string;
+  //Change this if capturing from api
+  isWishListed: boolean = false;
 
   constructor() { }
 
@@ -107,5 +112,17 @@ export class CompassCourseCardComponent implements OnInit {
     } else {
       return percentage + '% completed'
     }
+  }
+
+  cardClicked() {
+    if (!(event.target as HTMLElement).classList.contains('mat-icon')) {
+      this.courseCardClicked.emit();
+    }
+  }
+
+  onWishList(option: string) {
+    event.stopPropagation();
+    this.isWishListed = !this.isWishListed;
+    this.favoriteIconClicked.emit(option);
   }
 }
