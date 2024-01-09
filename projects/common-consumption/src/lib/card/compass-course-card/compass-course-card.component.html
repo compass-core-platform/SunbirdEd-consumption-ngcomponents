@@ -11,8 +11,8 @@
             <span *ngIf='data["rating"]' class="rating">{{data["rating"]}}</span> <i *ngIf='data["rating"]'
                 class="star icon"></i> <span *ngIf='data["rating"]' class="dot">.</span>
             <i *ngIf='duration' class="clock icon"></i> <span class="duration">{{duration}}</span>
-            <mat-icon *ngIf="isWishListed && showIcon" class="heart-icon-selected" (click)="onWishList('unselected')">favorite</mat-icon>
-            <mat-icon *ngIf="!isWishListed && showIcon" class="heart-icon-unselected" (click)="onWishList('selected')">favorite_outline</mat-icon>
+            <mat-icon *ngIf="data['isWishListed'] && showIcon" class="heart-icon-selected" (click)="onWishList('unselected')">favorite</mat-icon>
+            <mat-icon *ngIf="!data['isWishListed'] && showIcon" class="heart-icon-unselected" (click)="onWishList('selected')">favorite_outline</mat-icon>
         </div>
     </div>
     <div class="progress" *ngIf="showProgress">
