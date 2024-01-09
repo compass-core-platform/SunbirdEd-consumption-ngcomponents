@@ -18,9 +18,9 @@
                     </span>  <span *ngIf="config['rating']">&nbsp; &#8226;  &nbsp;</span>
                     <span class="rating-keyworks__durations" *ngIf="config['duration']">{{config['duration']}}</span> 
                     <span *ngIf="config['duration']"> &nbsp; &#8226;  &nbsp; </span>
-                    <a *ngIf="isWishListed" class="rating-keyworks__wishList" href="javascript:void(0)" (click)="addwhishList('unselected')">
-                    Add to wishlist <mat-icon>playlist_add</mat-icon></a>
-                    <a *ngIf="!isWishListed" class="rating-keyworks__wishList" href="javascript:void(0)" (click)="addwhishList('selected')">
+                    <a *ngIf="config['isWishListed']" class="rating-keyworks__wishList" href="javascript:void(0)" (click)="addwhishList('unselected')">
+                        Wishlisted <mat-icon>playlist_add_check</mat-icon></a>
+                    <a *ngIf="!config['isWishListed']" class="rating-keyworks__wishList" href="javascript:void(0)" (click)="addwhishList('selected')">
                         Add to wishlist <mat-icon>playlist_add</mat-icon>
                     </a>
                 </p>

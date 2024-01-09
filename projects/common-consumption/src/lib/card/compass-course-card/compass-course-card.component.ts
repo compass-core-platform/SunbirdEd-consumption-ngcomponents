@@ -20,8 +20,6 @@ export class CompassCourseCardComponent implements OnInit {
   contentType: string;
   duration: string;
   primaryCategory: string;
-  //Change this if capturing from api
-  isWishListed: boolean = false;
 
   constructor() { }
 
@@ -122,7 +120,6 @@ export class CompassCourseCardComponent implements OnInit {
 
   onWishList(option: string) {
     event.stopPropagation();
-    this.isWishListed = !this.isWishListed;
     this.favoriteIconClicked.emit(option);
   }
 }
