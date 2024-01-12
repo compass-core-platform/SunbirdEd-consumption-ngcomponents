@@ -21,6 +21,7 @@ export class PopularCardComponent implements OnInit {
   @Input() pillName: string;
   display: boolean = false;
   @Output() filterChange: EventEmitter<{courseData?: any }> = new EventEmitter();
+  @Output() favoriteIconClicked = new EventEmitter<any>()
   
   constructor() { }
 
@@ -33,6 +34,14 @@ export class PopularCardComponent implements OnInit {
 
   emitFilterChangeEvent(item: any) {
     this.filterChange.emit(item);
+  }
+
+  wishlistIconClicked(option: string, identifier: string) {
+    const obj = {
+      option: option,
+      identifier: identifier
+    }
+    this.favoriteIconClicked.emit(obj);
   }
 
 }
